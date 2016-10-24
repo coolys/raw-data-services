@@ -5,9 +5,9 @@ import uuid
 
 app = Flask(__name__)
 
-app.config.from_pyfile('cooleapp.cfg')
+app.config.from_pyfile('config.cfg')
 
-connection = happybase.Connection(app.config['HBASE_HOST'], app.config['HBASE_PORT'])
+connection = happybase.Connection(app.config['HBASE_HOST'])
 feeds_table = connection.table('feeds')
 
 
@@ -56,5 +56,5 @@ def insert():
     return jsonify({'api': 'feed services', 'version': 'v1.0'})
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':    
     app.run(host='0.0.0.0')
