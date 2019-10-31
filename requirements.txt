@@ -1,4 +1,4 @@
-Flask==0.10.1
+Flask==1.0
 happybase==1.0.0
 flask-ripozo==1.0.4
 ripozo-sqlalchemy==1.0.2
